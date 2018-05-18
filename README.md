@@ -1,7 +1,7 @@
 gavant-ember-button-link
 ==============================================================================
 
-[Short description of the addon.]
+A button component wrapper for `{{link-to}}`.
 
 Installation
 ------------------------------------------------------------------------------
@@ -10,11 +10,20 @@ Installation
 ember install gavant-ember-button-link
 ```
 
-
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+```js
+{{button-link "some.route" (query-params foo="bar")
+    type="primary"
+    label="Some Link"
+}}
+```
+
+Extends [gavant-ember-button-basic](https://github.com/Gavant/gavant-ember-button-basic), so it accepts all the same options, except:
+
+- `action`
+- `bubbles`
 
 
 Contributing
