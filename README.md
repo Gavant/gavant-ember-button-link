@@ -28,6 +28,8 @@ Extends [gavant-ember-button-basic](https://github.com/Gavant/gavant-ember-butto
 - `action`
 - `bubbles`
 
+Also, when using the component in inline form, you **CANNOT** use the `label` option, you must pass in the label as the 1st positional component param, e.g. `{{button-link "Label" "route"}}`.
+
 Contributing
 ------------------------------------------------------------------------------
 
