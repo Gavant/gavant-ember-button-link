@@ -1,3 +1,16 @@
-<h2 id="title">Welcome to Ember</h2>
-
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="my-4">gavant-ember-button-link</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            {{button-link "Inline" "test" (query-params foo="bar") type="primary"}}
+            {{#button-link "test" (query-params foo="bar") type="primary"}}
+                Block
+            {{/button-link}}
+        </div>
+    </div>
+</div>
 {{outlet}}
