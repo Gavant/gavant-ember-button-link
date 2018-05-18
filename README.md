@@ -14,17 +14,19 @@ Usage
 ------------------------------------------------------------------------------
 
 ```js
-{{button-link "some.route" (query-params foo="bar")
-    type="primary"
-    label="Some Link"
-}}
+{{button-link "Some Link" "some.route" (query-params foo="bar") type="primary"}}
+```
+
+```js
+{{#button-link "some.route" type="primary"}}
+    Some Link
+{{/button-link}}
 ```
 
 Extends [gavant-ember-button-basic](https://github.com/Gavant/gavant-ember-button-basic), so it accepts all the same options, except:
 
 - `action`
 - `bubbles`
-
 
 Contributing
 ------------------------------------------------------------------------------

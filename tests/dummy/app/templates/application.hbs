@@ -6,10 +6,10 @@
     </div>
     <div class="row">
         <div class="col-12">
-            {{button-basic "test"
-                label="Test Link"
-                type="primary"
-            }}
+            {{button-link "Inline" "test" (query-params foo="bar") type="primary"}}
+            {{#button-link "test" (query-params foo="bar") type="primary"}}
+                Block
+            {{/button-link}}
         </div>
     </div>
 </div>
