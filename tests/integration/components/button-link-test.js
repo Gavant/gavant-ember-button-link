@@ -10,13 +10,13 @@ module('Integration | Component | button-link', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{button-link}}`);
+    await render(hbs`{{button-link "Test" "test"}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
+    assert.equal(this.element.textContent.trim(), 'Test');
 
     // Template block usage:
     await render(hbs`
-      {{#button-link}}
+      {{#button-link "test"}}
         template block text
       {{/button-link}}
     `);
