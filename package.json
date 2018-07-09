@@ -1,6 +1,6 @@
 {
   "name": "gavant-ember-button-link",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A button component wrapper for {{link-to}}",
   "author": "Gavant Software, Inc.",
   "repository": "https://github.com/Gavant/gavant-ember-button-link",
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "gavant-ember-button-basic": "^0.0.7"
+    "gavant-ember-button-basic": "^0.0.8"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
