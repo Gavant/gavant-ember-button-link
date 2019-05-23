@@ -7,7 +7,7 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install gavant-ember-button-link
+ember install @gavant/ember-button-link
 ```
 
 Usage
