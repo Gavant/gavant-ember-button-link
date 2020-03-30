@@ -19,7 +19,7 @@ export default class ButtonLink extends Button<ButtonLinkArgs> {
      * just default it to an empty array
      */
     get models() {
-        return this.args.models || [];
+        return this.args.models ?? [];
     }
 
     /**
