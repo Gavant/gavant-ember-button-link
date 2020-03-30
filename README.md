@@ -1,4 +1,4 @@
-gavant-ember-button-link
+@gavant/ember-button-link
 ==============================================================================
 
 A lightweight button component wrapper for `<LinkTo>` that extends [@gavant/ember-button-basic](https://github.com/Gavant/gavant-ember-button-basic).
