@@ -5,7 +5,8 @@
     @query={{@query}}
     @replace={{@replace}}
     @current-when={{@currentWhen}}
-    class="action-button action-button-link btn {{this.buttonTypeClass}} {{this.buttonSizeClass}} {{if this.isIconButton "icon-btn"}}
+    class="action-button action-button-link btn {{this.buttonTypeClass}} {{this.buttonSizeClass}}
+        {{~if this.isIconButton "icon-btn"}}
         {{~if @blockLayout " btn-block"}}
         {{~if @wide " btn-wide"}}
         {{~if @slim " btn-slim"}}
