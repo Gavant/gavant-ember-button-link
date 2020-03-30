@@ -39,6 +39,7 @@ An example `<ButtonLink>` usage, with all available arguments used. Note that al
     @activeClass={{boolean}}
 />
 
+{{!-- block form is supported too --}}
 <ButtonLink
     @route={{string}}
     @models={{array}}
