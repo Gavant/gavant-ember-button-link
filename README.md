@@ -27,26 +27,33 @@ yarn add --dev @fortawesome/free-solid-svg-icons
 Usage
 ------------------------------------------------------------------------------
 
-An example `<ButtonLink>` usage, with all available arguments used. Note that all arguments provided by the base `<Button>` component are supported too, but are not listed here. See the addon's [usage documentation](https://github.com/Gavant/gavant-ember-button-basic#usage) for details. `@route` is the only required argument.
+An example `<ButtonLink>` usage, with all available arguments used. Note that all arguments provided by the base `<Button>` component are supported too, but are not all listed here. See the addon's [usage documentation](https://github.com/Gavant/gavant-ember-button-basic#usage) for details. `@route` is the only required argument.
 
 ```hbs
 <ButtonLink
-    @route="some.route"
+    @label={{string}}
+    @models={{array}}
+    @query={{object}}
+    @replace={{boolean}}
+    @currentWhen={{boolean}}
+    @activeClass={{boolean}}
+/>
+
+<ButtonLink
+    @route={{string}}
     @models={{array}}
     @query={{object}}
     @replace={{boolean}}
     @currentWhen={{boolean}}
     @activeClass={{boolean}}
 >
-    Link Text
+    Look ma, block content!
 </ButtonLink>
 ```
 
 **IMPORTANT:** Unlike the built-in `<LinkTo>` component, `<ButtonLink>` does NOT support the singular `@model={{...}}` argument, only `@models={{..}}`. This is due to a current limitation with the Glimmer component structure (which may go away in the future), and the fact that `<LinkTo>` does not allow both arguments to be passed in, even if one is `null` or `undefined`. 
 
 So in cases where you only have a single model to pass in, just use the built-in `{{array}}` helper to format it as an array of 1 element, i.e. `@models={{array myModel}}`.
-
-**Note:** Just like a regular HTML `<a>` element, `<ButtonLink>` can only be used in `<ButtonLink>...</ButtonLink>` block form, inline form is not supported (as it is no longer supported with `<LinkTo>` either).
 
 Contributing
 ------------------------------------------------------------------------------
