@@ -1,6 +1,6 @@
 {
   "name": "@gavant/ember-button-link",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "A button component wrapper for <LinkTo>",
   "author": "Gavant Software, Inc.",
   "repository": "https://github.com/Gavant/gavant-ember-button-link",
