@@ -1,15 +1,45 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h2 class="my-4">gavant-ember-button-link</h2>
+            <h2 class="my-4">@gavant/ember-button-link</h2>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
-            {{button-link "Inline" "test" (query-params foo="bar") type="primary"}}
-            {{#button-link "test" (query-params foo="bar") type="primary"}}
-                Block
-            {{/button-link}}
+            <ButtonLink @route="index" @icon="home">
+                Home
+            </ButtonLink>
+            <ButtonLink
+                @route="test"
+                @query={{hash foo="bar"}}
+                @type="primary"
+                title="I'm a title"
+                rel="page"
+            >
+                Query params
+            </ButtonLink>
+            <ButtonLink
+                @route="model-test"
+                @models={{array 1}}
+                @type="secondary"
+                @outline={{true}}
+                tabindex={{0}}
+            >
+                Route with model
+            </ButtonLink>
+            <ButtonLink
+                @route="model-test"
+                @models={{array 2}}
+                @type="success"
+                @outline={{true}}
+                @currentWhen={{true}}
+                @activeClass=""
+            >
+                Active class
+            </ButtonLink>
+            <ButtonLink @route="test" @action={{this.linkAction}}>
+                Click action
+            </ButtonLink>
         </div>
     </div>
 </div>
