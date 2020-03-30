@@ -1,7 +1,7 @@
 gavant-ember-button-link
 ==============================================================================
 
-A button component wrapper for `{{link-to}}`.
+A lightweight button component wrapper for `<LinkTo>` that extends [@gavant/ember-button-basic](https://github.com/Gavant/gavant-ember-button-basic).
 
 
 Compatibility
@@ -19,25 +19,34 @@ Installation
 ember install @gavant/ember-button-link
 ```
 
+**NOTE:** This addon uses FontAwesome 5 ([@fortawesome/ember-fontawesome](https://github.com/FortAwesome/ember-fontawesome)) for icon support. However it does NOT install any icon set packages. You must install these separately, following the addon's installation guide, e.g.
+```
+yarn add --dev @fortawesome/free-solid-svg-icons
+```
+
 Usage
 ------------------------------------------------------------------------------
 
-```js
-{{button-link "Some Link" "some.route" (query-params foo="bar") type="primary"}}
+An example `<ButtonLink>` usage, with all available arguments used. Note that all arguments provided by the base `<Button>` component are supported too, but are not listed here. See the addon's [usage documentation](https://github.com/Gavant/gavant-ember-button-basic#usage) for details. `@route` is the only required argument.
+
+```hbs
+<ButtonLink
+    @route="some.route"
+    @models={{array}}
+    @query={{object}}
+    @replace={{boolean}}
+    @currentWhen={{boolean}}
+    @activeClass={{boolean}}
+>
+    Link Text
+</ButtonLink>
 ```
 
-```js
-{{#button-link "some.route" type="primary"}}
-    Some Link
-{{/button-link}}
-```
+**IMPORTANT:** Unlike the built-in `<LinkTo>` component, `<ButtonLink>` does NOT support the singular `@model={{...}}` argument, only `@models={{..}}`. This is due to a current limitation with the Glimmer component structure (which may go away in the future), and the fact that `<LinkTo>` does not allow both arguments to be passed in, even if one is `null` or `undefined`. 
 
-Extends [gavant-ember-button-basic](https://github.com/Gavant/gavant-ember-button-basic), so it accepts all the same options, except:
+So in cases where you only have a single model to pass in, just use the built-in `{{array}}` helper to format it as an array of 1 element, i.e. `@models={{array myModel}}`.
 
-- `action`
-- `bubbles`
-
-Also, when using the component in inline form, you **CANNOT** use the `label` option, you must pass in the label as the 1st positional component param, e.g. `{{button-link "Label" "route"}}`.
+**Note:** Just like a regular HTML `<a>` element, `<ButtonLink>` can only be used in `<ButtonLink>...</ButtonLink>` block form, inline form is not supported (as it is no longer supported with `<LinkTo>` either).
 
 Contributing
 ------------------------------------------------------------------------------
