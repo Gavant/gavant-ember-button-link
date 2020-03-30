@@ -4,23 +4,19 @@ import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | button-link', function(hooks) {
-  setupRenderingTest(hooks);
+    setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    test('it renders', async function(assert) {
+        // Set any properties with this.set('myProperty', 'value');
+        // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{button-link "Test" "test"}}`);
+        // Template block usage:
+        await render(hbs`
+            <ButtonLink @route="test">
+            template block text
+            </ButtonLink>
+        `);
 
-    assert.equal(this.element.textContent.trim(), 'Test');
-
-    // Template block usage:
-    await render(hbs`
-      {{#button-link "test"}}
-        template block text
-      {{/button-link}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
-  });
+        assert.equal(this.element.textContent.trim(), 'template block text');
+    });
 });
